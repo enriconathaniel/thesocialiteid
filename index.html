@@ -17,6 +17,7 @@
     <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <link rel='stylesheet' href='css/main.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Socialite</title>
     <link rel="icon" href="./assets/img/logo.png">
 
@@ -35,16 +36,24 @@
               <span class="navbar-toggler-icon"></span>
             </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto" style="text-align: center; display: flex; flex: 1; justify-content: space-evenly; font-size: xx-large;">
-                <li class="nav-item active"><a class="nav-link" style="color:#891919;" href="./index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" style="color:#891919;" href="./room.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" style="color:#891919;" href="./about.html">Reservations</a></li>
-                <li class="nav-item"><a class="nav-link" style="color:#891919;" href="./blog.html">Menus</a></li>
-                <li class="nav-item"><a class="nav-link" style="color:#891919;" href="./contact.html">Location</a></li>
+            <ul class="navbar-nav mr-auto" style="text-align: center; display: flex; flex: 1; justify-content: space-evenly; font-size: xx-large; font-family: 'Lato';">
+                <li class="nav-item active"><a class="nav-link" style="color:#891919;" href="./index.html#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" style="color:#891919;" href="./index.html#aboutus">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" style="color:#891919;" href="./index.html#reservations">Reservations</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" style="color:#891919;" href="./blog.html">Menus</a></li> -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:#891919;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Menus</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./makanan.html" style="color:#891919; font-size: x-large;">Makanan</a>
+                        <a class="dropdown-item" href="./minuman.html" style="color:#891919; font-size: x-large;">Minuman</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" style="color:#891919;" href="./index.html#contactus">Contact Us</a></li>
             </ul>
         </div>
     </nav>
-    <div class="container col-md-12">
+    <div class="container col-md-12" id="home">
         <div class="row align-items-center">
             <div class="col-md-12" style="padding-right: 0; padding-left: 0;">
                 <img src="./assets/img/socialite.png" class="img-responsive" alt="Responsive image" style="width: 100%;  height: 100%; display: block;">
@@ -74,7 +83,7 @@
     </div>
 
 
-    <div class="container col-md-12">
+    <div class="container col-md-12" style="background-color:#891919;" id="aboutus">
         <div class="row align-items-center">
             <div class="col-md-6" style="padding-right: 0; padding-left: 0;">
                 <img src="./assets/img/1.png" class="img-responsive" alt="Responsive image" style="width: 100%;  height: auto; display: block;">
@@ -82,10 +91,15 @@
             <div class="col-md-6 text-about-us" style="padding-right: 10; padding-left: 10;">
                 <!-- <img src="./assets/img/about-us.png" class="img-responsive" alt="Responsive image" style="width: 100%; height: auto; display: block; position: relative;
                     top: 0; left: 0;"> -->
-                <h1 class="head-about-us">About Us</h1>
-                <p class="p-about-us">
+                <h1 class="head-about-us" style="padding-top:8vh">About Us</h1>
+                <p class="p-about-us" style="padding-left:25%; padding-right:25%">
                     "In Socialite, We serve you with the best service, the best food, and comfortable atmosphere at affordable prices"
                 </p>
+                <div style="text-align: center">
+                    <a class="btn" href="./about-us.html" role="button">
+                        <img src="./assets/img/read-more.png" alt="Responsive image" style="width: 70%;  height: auto;">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -100,39 +114,39 @@
             </div>
         </div>
     </div>
-    <div class="container col-md-12">
+    <div class="container col-md-12" id="reservations">
         <div class="row align-items-center">
             <div class="col-md-6" style="padding-right: 0; padding-left: 0;">
                 <img src="./assets/img/reservations.png" class="img-responsive" alt="Responsive image" style="width: 100%;  height: auto; display: block;">
             </div>
-            <div class="col-md-6">
-                <form style="font-size:xx-large">
-                    <div class="form-group">
+            <div class="col-md-6" style="padding-left: 5%; padding-right: 5%">
+                <form style="font-size: 2vh; padding-top:8vh; font-family: 'Lato';">
+                    <div class="form-group reservation">
                         <label for="fname" style="color:#891919;">Full Name</label>
                         <input type="text" class="form-control textinput-form" id="fname" name="firstname" placeholder="Your name..">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group reservation">
                         <label for="numPeople" style="color:#891919;">Number of People</label>
                         <input type="number" class="form-control textinput-form" id="lname" name="lastname" placeholder="Insert Number..">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group reservation">
                         <label for="dateForm" style="color:#891919;">Date</label>
                         <input id="datepicker" class="form-control textinput-form" />
                     </div>
-                    <div class="form-group">
+                    <div class="form-group reservation">
                         <label for="timeForm" style="color:#891919;">Time</label>
                         <input id="timepicker" class="form-control textinput-form" />
                     </div>
-                    <div class="form-group">
+                    <div class="form-group reservation">
                         <label for="lname" style="color:#891919;">Phone</label>
                         <input type="text" class="form-control textinput-form" id="lname" name="lastname" placeholder="Your Phone Number..">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group reservation">
                         <label for="lname" style="color:#891919;">E-mail</label>
                         <input type="text" class="form-control textinput-form" id="lname" name="lastname" placeholder="Your Email..">
                     </div>
 
-                    <div class="form-group" style="text-align: center"><input type="image" src="./assets/img/book-table.png" text-center width="15%" height="15%" name="saveForm"
+                    <div class="form-group reservation" style="text-align: center"><input type="image" src="./assets/img/book-table.png" text-center width="30%" height="30%" name="saveForm"
                             class="btTxt submit" id="saveForm" /></div>
 
                 </form>
@@ -140,19 +154,51 @@
         </div>
     </div>
     <div class="container col-md-12">
-        <div class="row align-items-center">
-
-            <img src="./assets/img/menu-home.png" class="img-responsive" alt="Responsive image" style="width: 100%;  height: auto; display: block;">
-
+        <div class="row align-items-center" style="background-color:#a82222; min-height:80vh">
+            <div class="col-md-4" style="padding-right: 0; padding-left: 0; text-align: right">
+                <img src="./assets/img/makanan.png" class="img-responsive" alt="Responsive image" style="width: 50%;  height: auto; ">
+            </div>
+            <div class="col-md-4" style="padding-right: 0; padding-left: 0;">
+                <h1 class="head-about-us" style="padding-top:8vh">Menus</h1>
+                <p class="p-about-us" style="padding-left:25%; padding-right:25%">
+                    The menu variants in our restaurant are made from quality ingredients and made by great chefs
+                </p>
+                <div style="text-align: center">
+                    <a class="btn" href="./about-us.html" role="button">
+                            <img src="./assets/img/tombol-our-menus.png" alt="Responsive image" style="width: 70%;  height: auto;">
+                        </a>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-right: 0; padding-left: 0; text-align: left">
+                <img src="./assets/img/minuman.png" class="img-responsive" alt="Responsive image" style="width: 50%; height: auto;">
+            </div>
         </div>
     </div>
-    <div class="container col-md-12">
-        <div class="row">
-            <div class="col-md-6" style="padding-right: 0px; padding-left: 0px;">
-                <img src="./assets/img/contact-us.png" class="img-responsive" alt="Responsive image" style="width: 100%;  height: auto; display: block;">
+    <div class="container col-md-12" id="contactus">
+        <div class="row align-items-center" style="background-color:#ffffff;">
+            <div class="col-md-5 col-xs-6" style="padding-right: 0px; padding-left: 0px;">
+                <h1 class="head-contact-us" style="padding-top:8vh">Contact Us</h1>
+                <p class="p-contact-us" style="padding-left:25%; padding-right:25%">
+                    Jl. Indragiri No.36, Darmo, Wonokromo, Kota SBY, Jawa Timur 60241
+                </p>
+                <div style="text-align: center; color:#891919; font-size:3vh">
+                    <i class="fa fa-envelope-o" style="color:#891919; font-size:3vh; font-family: 'Lato';"></i>&nbsp; thesocialite.id@gmail.com
+                </div>
+                <div style="text-align: center; color:#891919; font-size:3vh">
+                    <i class="fa fa-phone" style="color:#891919; font-size:3vh; font-family: 'Lato';"></i>&nbsp; 085853108005
+                    <br>&nbsp;&nbsp; 031-99531308
+                </div>
+                <div style="text-align: center">
+                    <a class="btn" href="./about-us.html" role="button">
+                        <img src="./assets/img/facebook.png" alt="Responsive image" style="width: 70%;  height: auto;">
+                    </a>
+                    <a class="btn" href="./about-us.html" role="button">
+                        <img src="./assets/img/instagram.png" alt="Responsive image" style="width: 70%;  height: auto;">
+                    </a>
+                </div>
             </div>
-            <div class="col-md-6" style="padding-right: 0px; padding-left: 0px;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977"
+            <div class="col-md-7 col-xs-6" style="padding-right: 0px; padding-left: 0px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.561140716438!2d112.72871331421558!3d-7.290667673682643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb93a5777e8f%3A0x302d356d422c95c5!2sTHE+SOCIALITE+Bistro+%26+Lounge!5e0!3m2!1sen!2sid!4v1557755614388!5m2!1sen!2sid"
                     frameborder="0" style="border:0; height:100vh; width:100%" allowfullscreen></iframe>
             </div>
         </div>
@@ -168,8 +214,35 @@
         $('.carousel').carousel({
             interval: 2000
         })
+
+        window.scroll({
+            top: 2500,
+            left: 0,
+            behavior: 'smooth'
+        });
+
+        // Scroll certain amounts from current position 
+        window.scrollBy({
+            top: 100, // could be negative value
+            left: 0,
+            behavior: 'smooth'
+        });
+
+        // Scroll to a certain element
+        document.querySelector('.hello').scrollIntoView({
+            behavior: 'smooth'
+        });
     </script>
 
 </body>
+<footer class="page-footer font-small" style="background-color:#891919">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 footer-socialite">© 2019 Copyright:
+        <a href="https://mdbootstrap.com/education/bootstrap/" class="footer-socialite"> thesocialiteid.com</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
 
 </html>

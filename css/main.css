@@ -1,8 +1,12 @@
 .textinput-form {
     height: 5vh;
-    line-height: 20;
-    font-size: 2rem;
+    line-height: 3vh;
+    font-size: 2vh;
 }
+
+html {
+    scroll-behavior: smooth;
+}  
 
 .navbar-fixed-top {
     top: 0;
@@ -12,15 +16,40 @@
 
 .head-about-us {
     font-family: 'Great Vibes';
-    font-size: 36px;
     text-align: center;
-    
+    font-size: 9vh;
+    color: #ffffff;
 }
 
 .p-about-us {
     font-family: 'Lato';
-    font-size: 2rem;
+    font-size: 3vh;
     text-align: center;
     font-style: italic;
+    color: #ffffff;
+}
+
+.head-contact-us {
+    font-family: 'Great Vibes';
+    text-align: center;
+    font-size: 9vh;
+    color: #891919;
+    font-style: bold;
+}
+
+.p-contact-us {
+    font-family: 'Lato';
+    font-size: 3vh;
+    text-align: center;
+    font-style: italic;
+    color: #891919;
+}
+
+.footer-socialite{
+    color: #ffffff;
+}
+
+.reservation {
+    margin-bottom: 0.3rem;
 }
 
